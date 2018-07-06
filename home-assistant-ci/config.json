@@ -1,6 +1,6 @@
 {
   "name": "GitLab CI",
-  "version": "0.4",
+  "version": "0.5",
   "slug": "gitlab_ci",
   "description": "Gitlab CI for your configuration",
   "startup": "services",

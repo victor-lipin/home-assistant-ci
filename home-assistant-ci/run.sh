@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 ####### config #######
 CONFIG_PATH=/data/options.json
@@ -14,6 +15,7 @@ CONFIG_ZIP_FILE="/tmp/config.zip"
 
 ##### functions ######
 function get-latest-version-number {
+    echo "[Info] Get latest version informations"
     curl --location --silent --show-error --fail --output "${LATEST_VERSION_FILE}" --header "Private-Token: ${GITLAB_PRIVATE_TOKEN}" "${VERSION_ENDPOINT}"
 }
 

@@ -11,6 +11,8 @@ REPEAT_INTERVAL=$(jq --raw-output '.repeat.interval' $CONFIG_PATH)
 CURRENT_VERSION_FILE="/config/version.txt"
 LATEST_VERSION_FILE="/config/latest-version.txt"
 CONFIG_ZIP_FILE="/tmp/config.zip"
+TEMP_FOLDER="/tmp"
+CONFIG_FOLDER="/config"
 ######################
 
 ##### functions ######
@@ -43,7 +45,8 @@ function pull-latest-version {
 
 function extract-config {
     echo "[Info] Unzip configuration"
-    unzip -o "${CONFIG_ZIP_FILE}" dist/* -d /config
+    unzip "${CONFIG_ZIP_FILE}" -d "${TEMP_FOLDER}"
+    cp -rf "${TEMP_FOLDER}/dist" "${CONFIG_FOLDER}"
 }
 
 function reload-config {

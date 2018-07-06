@@ -46,7 +46,7 @@ function pull-latest-version {
 function extract-config {
     echo "[Info] Unzip configuration"
     unzip "${CONFIG_ZIP_FILE}" -d "${TEMP_FOLDER}"
-    cp -rf "${TEMP_FOLDER}/dist" "${CONFIG_FOLDER}"
+    cp -rf "${TEMP_FOLDER}/dist/*" "${CONFIG_FOLDER}"
 }
 
 function reload-config {

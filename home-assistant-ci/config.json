@@ -1,0 +1,28 @@
+{
+  "name": "GitLab CI",
+  "version": "0.4",
+  "slug": "gitlab_ci",
+  "description": "Gitlab CI for your configuration",
+  "startup": "services",
+  "boot": "manual",
+  "hassio_api": true,
+  "map": ["config:rw"],
+  "options": {
+    "gitlab_private_token": "",
+    "version_endpoint": "",
+    "artifact_endpoint": "",
+    "repeat": {
+      "active": false,
+      "interval": 300
+    }
+  },
+  "schema": {
+    "gitlab_private_token": "str",
+    "version_endpoint": "str",
+    "artifact_endpoint": "str",
+    "repeat": {
+      "active": "bool",
+      "interval": "int"
+    }
+  }
+}

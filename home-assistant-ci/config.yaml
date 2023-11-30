@@ -1,0 +1,32 @@
+name: GitLab CI
+description: Gitlab CI for your configuration
+version: 0.7
+slug: gitlab_ci
+url: https://github.com/victor-lipin/home-assistant-ci
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+startup: services
+boot: manual
+hassio_api: true
+map:
+  - config:rw
+
+options:
+  gitlab_private_token: ""
+  version_endpoint: ""
+  artifact_endpoint: ""
+  repeat:
+    active: false
+    interval: 300
+
+schema:
+  gitlab_private_token: str
+  version_endpoint: str
+  artifact_endpoint: str
+  repeat:
+    active: bool
+    interval: int

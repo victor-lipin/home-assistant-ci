@@ -11,6 +11,7 @@ arch:
   - i386
 startup: services
 boot: manual
+init: false
 hassio_api: true
 map:
   - config:rw

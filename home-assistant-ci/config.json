@@ -7,7 +7,7 @@
   "boot": "manual",
   "hassio_api": true,
   "map": ["config:rw"],
-  "arch": "amd64"
+  "arch": "amd64",
 
   "options": {
     "gitlab_private_token": "",
